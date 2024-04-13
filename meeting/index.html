@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Appointment tracker</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Meeting tracker</h1>
+        <form>
+            <fieldset>
+                <legend>Enter your meeting date</legend>
+                <p>
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required />
+                </p>
+                <p>
+                    <label for="appointee-name">Apointee name</label>
+                    <input id="appointee-name" required />
+                </p>
+                <p>
+                    <textarea id="appointee-notes" name="appointee-notes" placeholder="Notes"></textarea>
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Add Meeting</button>
+            </p>
+        </form>
+        <section id="past-meetings">
+
+        </section>
+        <script src="app.js" defer></script>
+    </body>
+</html>
