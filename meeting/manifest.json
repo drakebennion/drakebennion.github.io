@@ -2,7 +2,7 @@
     "name": "MeetingTracker: Appointment Tracking app",
     "short_name": "MT",
     "description": "Track your meetings and appointments. Enter an appointment date and name of who you're meeting with, and any notes you'd like.",
-    "start_url": "/",
+    "start_url": "/meeting",
     "theme_color": "#efe",
     "background_color": "#efe",
     "display": "standalone",
