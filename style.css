@@ -1,4 +1,52 @@
 body {
     margin: 1vh 1vw;
     background-color: rgb(142, 209, 224);
+    /* color: #595457; */
+}
+
+.content {
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 2vh 2vw;
+    border-radius: 16px;
+}
+
+.left .container, .right .container{
+    box-shadow: #9f9199 -10px 10px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10vw;
+}
+
+.right .container {
+    margin-bottom: 10vh;
+}
+
+.header {
+    background-color: #E5625E;
+}
+
+.about {
+    background-color: #C3BEF7;
+}
+
+.experience {
+    background-color: #63E2C6;
+}
+
+.portfolio {
+    background-color: #E5E059;
+}
+
+.me {
+    background-color: #595457;
+    color: #ddd;
 }
