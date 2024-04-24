@@ -1,13 +1,14 @@
 body {
-    margin: 1vh 1vw;
-    background-color: rgb(142, 209, 224);
-    /* color: #595457; */
+    margin: 0;
+    padding: 0;
 }
 
 .content {
-    background-color: #ddd;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -15,8 +16,13 @@ body {
     border-radius: 16px;
 }
 
+.left, .right {
+    pointer-events: none;
+    z-index: 2;
+}
+
 .left .container, .right .container{
-    box-shadow: #9f9199 -10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) -10px 10px;
 }
 
 .right {
@@ -49,4 +55,19 @@ body {
 .me {
     background-color: #595457;
     color: #ddd;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 105%;
+    max-height: 100%;
+    opacity: 0.8;
+}
+.square {
+    height: 10vh;
+    width: 10vh;
+    position: relative;
 }
