@@ -3,6 +3,19 @@ body {
     padding: 0;
 }
 
+h1, h2, h4, p, li {
+    font-family: "Josefin Sans", sans-serif; 
+    font-optical-sizing: auto;
+}
+
+h4 {
+    font-weight: 400;
+}
+
+p, li {
+    font-weight: 300;
+}
+
 .content {
     display: flex;
     justify-content: space-between;
@@ -17,8 +30,13 @@ body {
 }
 
 .left, .right {
+    /* there's probably a better way to handle this, but it'll work for now :) */
     pointer-events: none;
     z-index: 2;
+}
+
+a {
+    pointer-events: all;
 }
 
 .left .container, .right .container{
