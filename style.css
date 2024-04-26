@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 h1, h2, h4, p, li {
@@ -40,7 +41,7 @@ a {
 }
 
 .left .container, .right .container{
-    box-shadow: rgba(0, 0, 0, 0.3) -10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 5px;
 }
 
 .right {
@@ -85,7 +86,7 @@ a {
     opacity: 0.8;
 }
 .square {
-    height: 10vh;
-    width: 10vh;
+    height: 100px;
+    width: 100px;
     position: relative;
 }
