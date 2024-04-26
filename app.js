@@ -24,7 +24,7 @@ function initCanvas() {
     canvas.width = canvasWidth;
     const ctx = canvas.getContext('2d');
 
-    const numCols = 25; // todo: higher number for wider screens
+    const numCols = 15; // todo: higher number for wider screens
     const squareSideLength = canvasWidth / numCols;
     const numRows = canvasHeight / squareSideLength;
     for (let row = 0; row < numRows; row++) {
