@@ -76,17 +76,9 @@ a {
     color: #ddd;
 }
 
-#grid {
-    display: flex;
-    flex-wrap: wrap;
+#canvas {
+    width: 100%;
     position: absolute;
     left: 0; top: 0; right: 0; bottom: 0;
-    width: 105%;
-    max-height: 100%;
     opacity: 0.8;
-}
-.square {
-    height: 100px;
-    width: 100px;
-    position: relative;
 }
