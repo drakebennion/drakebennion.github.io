@@ -114,7 +114,6 @@ a {
 
 .social-links {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
@@ -128,7 +127,13 @@ a {
     min-width: 48px;
 }
 
-.social-links a:not(:last-child) {
-    margin-bottom: 8px;
+#my-picture {
+    background-image: url("./assets/me.jpeg");
+    border-radius: 100%;
+    height: 216px;
+    width: 216px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 16px;
 }
-
