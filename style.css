@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 h1, h2, h4, p, li {
@@ -32,7 +31,7 @@ p, li {
 }
 
 .container {
-    padding: 2vh 2vw;
+    padding: 3vh 3.2vw;
     border-radius: 16px;
 }
 
@@ -106,6 +105,7 @@ a {
 }
 
 #linkedin {
+    background-image: url('./assets/In-White-48.png');
     opacity: 0.5;
 }
 
@@ -121,9 +121,12 @@ a {
 }
 
 .social-links a {
-    background-size: 48px;
-    height: 48px;
-    width: 48px;
+    height: 8vh;
+    width: 8vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 48px;
+    min-width: 48px;
 }
 
 .social-links a:not(:last-child) {

@@ -1,5 +1,5 @@
 const canvas = document.getElementById("canvas");
-const colors = ['#E5625E', '#C3BEF7', '#63E2C6', '#E5E059', '#595457', '#FFF'];
+const colors = ['#E5625E', '#C3BEF7', '#63E2C6', '#E5E059', '#595457', '#DDD'];
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
