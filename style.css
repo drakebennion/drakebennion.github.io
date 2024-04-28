@@ -49,6 +49,7 @@ p, li {
 .container {
     padding: 1vh 3.2vw;
     border-radius: 16px;
+    pointer-events: visible;
 }
 
 .left, .right {
@@ -58,7 +59,13 @@ p, li {
 }
 
 a {
+    color: rgb(89, 31, 89);
     pointer-events: all;
+    font-size: larger;
+}
+
+a:hover {
+    color: black;
 }
 
 .left .container, .right .container{
@@ -99,6 +106,10 @@ a {
 .me {
     background-image: linear-gradient(to top right, #595457, #5a4d55);
     color: #ddd;
+}
+
+.header:hover, .about:hover, .experience:hover, .portfolio:hover, .me:hover {
+    transform: scale(1.01);
 }
 
 #canvas {
