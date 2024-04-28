@@ -12,6 +12,14 @@ h1, h2, h4, p, li {
     font-optical-sizing: auto;
 }
 
+h1 {
+    text-shadow: #aaa 1px 1px;
+}
+
+/* h1, h2, h3, h4, h5 {
+    text-shadow: white 1px 1px;
+} */
+
 h2 {
     font-size: xx-large;
 }
@@ -59,13 +67,13 @@ p, li {
 }
 
 a {
-    color: rgb(89, 31, 89);
+    color: black;
     pointer-events: all;
-    font-size: larger;
 }
 
 a:hover {
     color: black;
+    text-shadow: white 1px 1px;
 }
 
 .left .container, .right .container{
