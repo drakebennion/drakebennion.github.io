@@ -61,23 +61,27 @@ a {
 }
 
 .header {
-    background-color: #E5625E;
+    background-image: linear-gradient(to top right, #E5625E, #bf433f);
+    
 }
 
 .about {
-    background-color: #C3BEF7;
+    background-image: linear-gradient(to top right, #C3BEF7, #8d87ca);
+    
 }
 
 .experience {
-    background-color: #63E2C6;
+    background-image: linear-gradient(to top right, #63E2C6, #49c0a6);
+    
 }
 
 .portfolio {
-    background-color: #E5E059;
+    background-image: linear-gradient(to top right, #E5E059, #c3bf3f);
+    
 }
 
 .me {
-    background-color: #595457;
+    background-image: linear-gradient(to top right, #595457, #3e383c);
     color: #ddd;
 }
 

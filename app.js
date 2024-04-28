@@ -1,5 +1,10 @@
 const canvas = document.getElementById("canvas");
 const colors = ['#E5625E', '#C3BEF7', '#63E2C6', '#E5E059', '#595457', '#DDD'];
+const darkerColors = ['#bf433f',
+    '#8d87ca',
+    '#49c0a6',
+    '#c3bf3f',
+    '#3e383c', '#aaa']
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -29,7 +34,12 @@ function initCanvas() {
     const numRows = canvasHeight / squareSideLength;
     for (let row = 0; row < numRows; row++) {
         for (let col = 0; col < numCols; col++) {
-            ctx.fillStyle = colors[getRandomInt(colors.length)];
+            const rand = getRandomInt(colors.length);
+            const grad = ctx.createLinearGradient(col * squareSideLength, row * squareSideLength, col * squareSideLength + squareSideLength, row * squareSideLength + squareSideLength);
+            grad.addColorStop(0, colors[rand]);
+            grad.addColorStop(1, darkerColors[rand]);
+            ctx.fillStyle = grad;
+            //ctx.fillStyle = colors[getRandomInt(colors.length)];
             ctx.fillRect(col * squareSideLength, row * squareSideLength, squareSideLength, squareSideLength);
         }
     }
@@ -45,7 +55,12 @@ function initCanvas() {
         const squareY = squareSideLength * Math.floor(y / squareSideLength);
 
         if (!(lastXY[0] === squareX && lastXY[1] === squareY)) {
-            ctx.fillStyle = colors[getRandomInt(colors.length)];
+            //ctx.fillStyle = colors[getRandomInt(colors.length)];
+            const rand = getRandomInt(colors.length);
+            const grad = ctx.createLinearGradient(squareX, squareY, squareX + squareSideLength, squareY + squareSideLength);
+            grad.addColorStop(0, colors[rand]);
+            grad.addColorStop(1, darkerColors[rand]);
+            ctx.fillStyle = grad;
             ctx.fillRect(squareX, squareY, squareSideLength, squareSideLength);
             lastXY[0] = squareX;
             lastXY[1] = squareY;
