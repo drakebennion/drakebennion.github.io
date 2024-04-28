@@ -29,7 +29,7 @@ function initCanvas() {
     canvas.width = canvasWidth;
     const ctx = canvas.getContext('2d');
 
-    const numCols = 15; // todo: higher number for wider screens
+    const numCols = canvasWidth <= 600 ? 10 : 15; 
     const squareSideLength = canvasWidth / numCols;
     const numRows = canvasHeight / squareSideLength;
     for (let row = 0; row < numRows; row++) {
@@ -39,7 +39,6 @@ function initCanvas() {
             grad.addColorStop(0, colors[rand]);
             grad.addColorStop(1, darkerColors[rand]);
             ctx.fillStyle = grad;
-            //ctx.fillStyle = colors[getRandomInt(colors.length)];
             ctx.fillRect(col * squareSideLength, row * squareSideLength, squareSideLength, squareSideLength);
         }
     }
@@ -55,7 +54,6 @@ function initCanvas() {
         const squareY = squareSideLength * Math.floor(y / squareSideLength);
 
         if (!(lastXY[0] === squareX && lastXY[1] === squareY)) {
-            //ctx.fillStyle = colors[getRandomInt(colors.length)];
             const rand = getRandomInt(colors.length);
             const grad = ctx.createLinearGradient(squareX, squareY, squareX + squareSideLength, squareY + squareSideLength);
             grad.addColorStop(0, colors[rand]);
