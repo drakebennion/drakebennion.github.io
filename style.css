@@ -32,6 +32,12 @@ h4, h5 {
 p, li {
     font-size: larger;
     font-weight: 300;
+    margin-bottom: 1vh;
+}
+
+.about-list li, .about-list h5 {
+    margin-top: 0;
+    margin-bottom: 1vh;
 }
 
 .about-list li::marker {
@@ -92,26 +98,39 @@ a:hover {
 }
 
 .header {
-    background-image: linear-gradient(to bottom right, #E5625E, #e2443f);
-    
+    filter: blur(3px);
+    transition: filter 1s;
 }
 
-.about {
+.about, .experience, .portfolio, .me {
+    filter: grayscale(80%);
+    transition: filter 1.5s;
+}
+
+.header.loaded, .about.loaded, .experience.loaded, .portfolio.loaded, .me.loaded {
+    filter: none;
+}
+
+.header.loaded {
+    background-image: linear-gradient(to bottom right, #E5625E, #e2443f);
+}
+
+.about.loaded {
     background-image: linear-gradient(to top right, #C3BEF7, #a49df5);
     
 }
 
-.experience {
+.experience.loaded {
     background-image: linear-gradient(to top right, #63E2C6, #44e4c2);
     
 }
 
-.portfolio {
+.portfolio.loaded {
     background-image: linear-gradient(to top right, #E5E059, #ece63a);
     
 }
 
-.me {
+.me.loaded {
     background-image: linear-gradient(to top right, #595457, #5a4d55);
     color: #ddd;
 }
@@ -124,7 +143,7 @@ a:hover {
     width: 100%;
     position: absolute;
     left: 0; top: 0; right: 0; bottom: 0;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 #email {
@@ -155,6 +174,12 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.social-links.loaded {
+    opacity: 1;
 }
 
 .social-links a {

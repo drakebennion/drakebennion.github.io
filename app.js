@@ -12,6 +12,12 @@ function getRandomInt(max) {
 
 window.onload = function() {
     initCanvas();
+
+    ['header', 'about', 'experience', 'portfolio', 'me', 'social-links']
+        .forEach((className) => {
+            const element = document.getElementsByClassName(className)[0];
+            element.className = 'loaded ' + element.className
+        });
 }
 
 window.onresize = function() {
