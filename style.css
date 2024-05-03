@@ -84,6 +84,7 @@ a:hover {
 
 .left .container, .right .container{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 5px;
+    margin-top: 2vh;
 }
 
 .right {
@@ -265,7 +266,7 @@ a:hover {
     }
 
     .container {
-        padding: 1vh 3.2vw;
+        padding: 1vh 2vw;
     }
 }
 
@@ -273,3 +274,14 @@ a:hover {
     good practice is to have default css be mobile design,
     and use media queries for larger widths
 */
+
+@media only screen and (min-width: 601px) {
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+    }
+
+    .header {
+        position: fixed;
+    }
+}
