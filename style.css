@@ -87,7 +87,7 @@ a {
     pointer-events: all;
 }
 
-a:hover {
+.right a:hover {
     color: black;
     text-shadow: white 1px 1px;
 }
@@ -126,22 +126,22 @@ a:hover {
     background-image: linear-gradient(to bottom right, #E5625E, #e2443f);
 }
 
-.about.loaded {
+.about.loaded, .about-link {
     background-image: linear-gradient(to top right, #C3BEF7, #a49df5);
     
 }
 
-.experience.loaded {
+.experience.loaded, .experience-link {
     background-image: linear-gradient(to top right, #63E2C6, #44e4c2);
     
 }
 
-.portfolio.loaded {
+.portfolio.loaded, .portfolio-link {
     background-image: linear-gradient(to top right, #E5E059, #ece63a);
     
 }
 
-.me.loaded {
+.me.loaded, .me-link {
     background-image: linear-gradient(to top right, #595457, #5a4d55);
     color: #ddd;
 }
@@ -244,7 +244,23 @@ a:hover {
 } */
 
 .right-links {
-    margin-bottom: 4vh;
+    margin-bottom: 3vh;
+}
+
+.right-links a {
+    border-radius: 8px;
+    padding: 1vh 2vw;
+    text-decoration: none;
+    transform: none;
+    transition: transform 0.5s;
+}
+
+.right-links a:hover {
+    transform: scale(1.1);
+}
+
+.right-links a h2 {
+    font-size: smaller;
 }
 
 @media only screen and (max-width: 600px) {
