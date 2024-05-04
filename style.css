@@ -7,7 +7,16 @@ body {
     padding: 0;
 }
 
-h1, h2, h4, p, li {
+@font-face {
+    font-family: cityof;
+    src: url('cityof.ttf');
+}
+
+h1, h2 {
+    font-family: cityof, "Josefin Sans", sans-serif;
+}
+
+h3, h4,h5, p, li {
     font-family: "Josefin Sans", sans-serif; 
     font-optical-sizing: auto;
 }
