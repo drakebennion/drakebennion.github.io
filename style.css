@@ -1,5 +1,6 @@
 html {
     background-color: #dcdcdc;
+    scroll-behavior: smooth;
 }
  
 body {
@@ -188,6 +189,7 @@ a:hover {
     align-items: center;
     opacity: 0;
     transition: opacity 2s;
+    width: 100%;
 }
 
 .social-links.loaded {
@@ -201,7 +203,6 @@ a:hover {
     background-repeat: no-repeat;
     min-height: 32px;
     min-width: 32px;
-    margin-left: 8px;
 }
 
 #my-picture {
@@ -242,6 +243,10 @@ a:hover {
     }
 } */
 
+.right-links {
+    margin-bottom: 4vh;
+}
+
 @media only screen and (max-width: 600px) {
     .content {
         flex-direction: column;
@@ -277,6 +282,10 @@ a:hover {
     .container {
         padding: 1vh 2vw;
     }
+
+    .right-links {
+        display: none;
+    }
 }
 
 /* todo: switch this up to be mobile-first: 
@@ -292,5 +301,11 @@ a:hover {
 
     .header {
         position: fixed;
+    }
+
+    .right-links {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 }
