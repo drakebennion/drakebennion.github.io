@@ -110,12 +110,14 @@ a {
 
 .header {
     filter: blur(3px);
-    transition: filter 1s;
+    transform: none;
+    transition: filter 1s, transform 0.5s;
 }
 
 .about, .experience, .portfolio, .me {
     filter: grayscale(80%);
-    transition: filter 1.5s;
+    transform: none;
+    transition: filter 1.5s, transform 0.5s;
 }
 
 .header.loaded, .about.loaded, .experience.loaded, .portfolio.loaded, .me.loaded {
@@ -147,7 +149,7 @@ a {
 }
 
 .header:hover, .about:hover, .experience:hover, .portfolio:hover, .me:hover {
-    transform: scale(1.01);
+    transform: scale(1.025);
 }
 
 #canvas {
@@ -203,6 +205,16 @@ a {
     background-repeat: no-repeat;
     min-height: 32px;
     min-width: 32px;
+    transform: none;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+#my-picture:hover {
+    transform: scale(1.08);
 }
 
 #my-picture {
@@ -216,6 +228,8 @@ a {
     margin-top: 0;
     margin-bottom: 16px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 5px;
+    transform: none;
+    transition: transform 0.5s;
 }
 
 .header-content, .picture-and-links {
@@ -250,6 +264,7 @@ a {
 .right-links a {
     border-radius: 8px;
     padding: 1vh 2vw;
+    margin-bottom: 1vh;
     text-decoration: none;
     transform: none;
     transition: transform 0.5s;
@@ -323,5 +338,11 @@ a {
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+}
+
+@media only screen and (max-height: 550px) {
+    .right-links {
+        display: none;
     }
 }
