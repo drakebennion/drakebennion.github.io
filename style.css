@@ -279,7 +279,7 @@ a {
     font-size: smaller;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     .content {
         flex-direction: column;
         align-items: center;
@@ -325,10 +325,14 @@ a {
     and use media queries for larger widths
 */
 
-@media only screen and (min-width: 601px) and (max-width: 1035px) {
+@media only screen and (min-width: 901px) and (max-width: 1035px) {
     .content {
         display: grid;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .header {
+        position: fixed;
     }
 }
 
