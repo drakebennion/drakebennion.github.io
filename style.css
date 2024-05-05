@@ -248,24 +248,13 @@ a {
     margin-bottom: 8px;
 }
 
-/* todo: want to fix left box to scroll with :) 
-    but may need to switch to a grid layout to do that
-*/
-/* @media only screen and (min-width: 601px) {
-    .header.container {
-        position: fixed;
-        margin-right: 10vw;
-    }
-
-    .right {
-        margin-left: 40vw;
-    }
-} */
-
 .right-links {
     margin-bottom: 3vh;
     max-height: 0;
     transition: max-height 1s;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .right-links.loaded {
@@ -336,7 +325,14 @@ a {
     and use media queries for larger widths
 */
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 601px) and (max-width: 1035px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    }
+}
+
+@media only screen and (min-width: 1036px) {
     .content {
         display: grid;
         grid-template-columns: 2fr 5fr;
@@ -346,11 +342,6 @@ a {
         position: fixed;
     }
 
-    .right-links {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
 }
 
 @media only screen and (max-height: 550px) {
